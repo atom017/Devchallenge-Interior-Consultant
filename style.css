@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@100;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #181719;
+    color: #fff;
+    font-family: "Lora" sans-serif;
+}
+
+#overlay{
+ position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 4;
+ 
+}
+
+.nav-overlay ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:20%;
+}
+
+
+.nav-overlay ul li{
+    padding-bottom: 20%;
+}
+
+.whole-container{
+    margin: 0 77px;
+}
+
+/*Header*/
+
+.logo-box{
+    font-size: 14px;
+    font-weight: 200;
+    border: 1px solid #fff;
+    padding: 8px;
+    width: 102px;
+
+}
+
+.navbar{
+    margin-top: 46px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar #menu-close{
+    display: none;
+    z-index: 5;
+}
+.navbar #menu-icon{
+    display: none;
+}
+.nav-items ul,.nav-overlay ul{
+    list-style: none;
+    display: flex;
+}
+
+.nav-items li{
+    margin-left: 86px;
+}
+.nav-items ul a,.nav-overlay ul a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Montserrat",sans-serif;
+    font-size: 18px;
+}
+
+.nav-items ul .current-page{
+    font-weight: 700;
+}
+
+
+/*Main*/
+.main-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+    margin-bottom: 50px;
+}
+.main-text h1{
+    font-size: 48px;
+    font-family: "Lora";
+}
+.main-container .main-text p{
+    font-family: "Montserrat" ;
+    width: 60%;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    margin: 46px 0;
+
+}
+
+.main-container .readmore{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    display: inline-block;
+    padding-bottom: 25px;
+}
+.main-container .main-text i{
+    margin-left: 15px;
+}
+
+.main-container .img-container img{
+    width: 100%;
+}
+
+.design{
+    display:flex;
+    flex-direction: column;
+   
+    align-items: flex-end;
+}
+
+.designer-wrap{
+    position: relative;
+    bottom: 80px;
+    right: 30px;
+    z-index: 3;
+    background-color: #181719;
+    border: 2px solid white;
+    max-width: 60% ;
+    max-height: 100%;
+   
+} 
+
+.designer-wrap > *{
+    margin-left: 30px;
+    margin-top: 15px;
+
+}
+.designer-wrap .designer{
+    display: flex;
+    
+}
+.designer-wrap .designer-img{
+    width: 82px;
+    height: 62px;
+    
+}
+.designer-wrap img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.designer-wrap .designer-about{
+   
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.designer-about p{
+    font-weight: 500;
+    font-size: 12px;
+    color: #828282;
+}
+
+.designer-wrap .credit{
+    font-family: "Lora";
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 10%;
+    width: 60%;
+    
+}
+
+/*Footer*/
+hr{
+   margin-left: 25%;
+   margin-right: 25%;
+    width: 50%;
+    border: 1px solid #a9a9a9;
+    height: 0px;
+    visibility: hidden;
+}
+
+footer{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    font-size: 14px;
+    color: #a9a9a9;
+}
+
+/*media query*/
+@media (max-width:768px){
+    .nav-items ul,.main-container{
+        display:block;   
+    }
+    .whole-container{
+        margin: 0 20px;
+    }
+    .navbar #menu-icon{
+        display: block;
+    }
+    .nav-items{
+        display:none;
+    }
+    
+    .main-text h1{
+        font-size: 36px;
+    }
+    .design{
+        flex-direction: column;
+        align-items: center;
+    }
+    .designer-wrap{
+        width: 300px;
+        right: 0px;
+    }
+    .designer-wrap .credit{
+        font-size: 18px;
+
+    }
+    hr{
+       visibility: visible;
+    }
+
+} 
+
+@media (max-width: 600px){
+    .main-container .main-text p,.main-container .main-text span{
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+}
